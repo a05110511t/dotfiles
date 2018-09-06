@@ -1,0 +1,10 @@
+Uuid: 98275a25394a417c9480f58740c1d981
+ExtensionType: 1
+Name: XSS Validator
+ScreenVersion: 1.3.0
+SerialVersion: 4
+MinPlatformVersion: 0
+ProOnly: False
+Author: John Poulin
+ShortDescription: Sends responses to a locally-running XSS-Detector server.
+EntryPoint: xss_validator.jar

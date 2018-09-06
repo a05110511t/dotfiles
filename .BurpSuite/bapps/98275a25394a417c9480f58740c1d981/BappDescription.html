@@ -1,0 +1,28 @@
+<p>This extension sends responses to a locally-running 
+XSS-Detector server, powered by either Phantom.js and/or Slimer.js<o:p></o:p></p>
+<p><strong>Usage:</strong></p>
+<p>Before starting an attack it is necessary to start the XSS-Detector servers. 
+Navigate to the xss-detector directory and execute the following:<o:p></o:p></p>
+<p>$ phantomjs xss.js &amp;<br>$ slimerjs slimer.js &amp;<o:p></o:p></p>
+<p>The server will listen by default on port 8093. The server is expecting 
+base64 encoded page responses passed via the http-response, which will be passed 
+via the Burp extender.</p>
+<p>Navigate to the 
+xssValidator tab, and copy the value for Grep Phrase. Enter this value within 
+the Burp Intruder grep-match function. Payloads that match this Grep Phrase 
+indicate successful execution of XSS payload.</p>
+<p><strong>Examples:</strong></p>
+<p>Within the xss-detector directory there is a folder of examples which can be 
+used to test the extenders functionality.</p>
+<ul>
+	<li>Basic-xss.php: This is the most basic example of a web application that 
+	is vulnerable to XSS. It demonstrates how legitimate javascript 
+	functionality, such as alerts and console logs, do not trigger 
+	false-positives.</li>
+	<li>Bypass-regex.php: This demonstrates a XSS vulnerability that occurs when 
+	users attempt to filter input by running it through a single-pass regex.</li>
+	<li>Dom-xss.php: A basic script that demonstrates the tools ability to 
+	inject payloads into javascript functionality, and detect their success.</li>
+</ul>
+
+<p>Requires Java version 7</p>
